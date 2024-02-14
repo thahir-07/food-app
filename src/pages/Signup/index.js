@@ -40,6 +40,7 @@ const Signup = () => {
                     _id: uid
                 })
             }).then((response) => {
+                console.log("signup success")
                 if (response.status === 200) {
                     setLoading(false);
                     toast.success('Account created successfully!🎉', {

@@ -1,13 +1,13 @@
 import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
-    apiKey: process.env.REACT_APP_FIREBASE_CONFIG_API_KEY,
-    authDomain: process.env.REACT_APP_FIREBASE_CONFIG_AUTH_DOMAIN,
-    projectId: process.env.REACT_APP_FIREBASE_CONFIG_PROJECT_ID,
-    storageBucket: process.env.REACT_APP_FIREBASE_CONFIG_STORAGE_BUCKET,
-    messagingSenderId: process.env.REACT_APP_FIREBASE_CONFIG_MESSAGING_SENDER_ID,
-    appId: process.env.REACT_APP_FIREBASE_CONFIG_APP_ID,
-    measurementId: process.env.REACT_APP_FIREBASE_CONFIG_MEASUREMENT_ID
-};
-
+    apiKey: "AIzaSyB_DBjmkn8NxnVjwK5rUhVqlxKFv6EVq0w",
+    authDomain: "food-6a2b8.firebaseapp.com",
+    projectId: "food-6a2b8",
+    storageBucket: "food-6a2b8.appspot.com",
+    messagingSenderId: "501062409670",
+    appId: "1:501062409670:web:75503ae507b06769af26c7",
+    measurementId: "G-BSP1Q963BK"
+  };
+  
 export const app = initializeApp(firebaseConfig);

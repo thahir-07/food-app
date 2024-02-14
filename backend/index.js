@@ -1,8 +1,18 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-
-const db=require("./db");
+const { default: mongoose } = require('mongoose');
+const connectDb = async () => {
+    try {
+      const connect = await mongoose.connect('mongodb+srv://abuthahir:6peiE56EcJzxptF7@cluster0.aodwl7l.mongodb.net/?retryWrites=true&w=majority')
+      console.log("Server is connected to mongodb Atlas")
+    }
+    catch (err) {
+      console.log("Server is not connected to mongodb Atlas  ", err.message)
+    }
+  
+  }
+  connectDb()
 const productRouter=require("./routes/productRouter.js");
 const userRouter = require("./routes/userRouter");
 
@@ -76,7 +86,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/api/', productRouter);
 app.use('/api/', userRouter);
 
-db.on("error", console.error.bind(console, "MongoDB connection error:"));
+
 
 app.get('/', function (req, res) {
     res.json({msg: 'Server set up successfully!'})

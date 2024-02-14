@@ -1,8 +1,9 @@
 const mongoose = require("mongoose");
+mongoose.set('strictQuery', false);
 
 // Set up default mongoose connection
-const mongoDB = "mongodb://localhost:27017/tomato";
-mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb+srv://userdiggerbad:m8WORSZwCNvWxr7E@cluster0.9n7uyka.mongodb.net/?retryWrites=true&w=majority');
+
 
 // Get the default connection
 const db = mongoose.connection;
